@@ -1,8 +1,80 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --width: 100vw;
+  --height: 10vh;
+  --top-color: #202020;
+  --bottom-color: #572020;
+}
+
+.Header {
+  background-color:#202020;
+  height: 10vh;
+}
+
+.Footer {
+  background-color: #572020;
+  height: 10vh;
+}
+
+.separator {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+}
+
+.separator::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--top-color);
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+.separator::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--bottom-color);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.separator2 {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+}
+
+.separator2::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--bottom-color);
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+.separator2::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--top-color);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+#logotop {
+  height: 180px;
+  width: auto;
+  z-index: 5;
+  position: relative;
+}
+
+#logobottom {
+  height: 180px;
+  width: auto;
+  z-index: 10;
+  position: absolute;
 }
 
 .logo {
@@ -18,25 +90,16 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Vice {
+  background-color: #572020;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.Versa {
+  background-color: #202020;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
 }
