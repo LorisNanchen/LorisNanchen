@@ -1,105 +1,74 @@
 :root {
-  --width: 100vw;
-  --height: 10vh;
-  --top-color: #202020;
-  --bottom-color: #572020;
+  padding: 0;
+  margin: 0;
+}
+
+#steps {
+  height: 15em;
+  background-image: url("./assets/steps.svg");
+}
+
+#sepbot {
+  height: 15em;
+  background-image: url("./assets/svg-separator.svg");
+  transform: rotateX(180deg);
+}
+#septop {
+  height: 15em;
+  background-image: url("./assets/svg-separator.svg");
+  transform: rotateX(180deg);
 }
 
 .Header {
   background-color:#202020;
   height: 10vh;
+  padding: 0;
+}
+
+#separator {
+  transform: rotateX(180deg);
 }
 
 .Footer {
   background-color: #572020;
   height: 10vh;
-}
-
-.separator {
-  position: relative;
-  width: var(--width);
-  height: var(--height);
-}
-
-.separator::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: var(--top-color);
-  clip-path: polygon(100% 0, 0 0, 0 100%);
-}
-
-.separator::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: var(--bottom-color);
-  clip-path: polygon(100% 0, 0 100%, 100% 100%);
-}
-
-.separator2 {
-  position: relative;
-  width: var(--width);
-  height: var(--height);
-}
-
-.separator2::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: var(--bottom-color);
-  clip-path: polygon(100% 0, 0 0, 0 100%);
-}
-
-.separator2::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: var(--top-color);
-  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 99vw;
 }
 
 #logotop {
-  height: 180px;
+  height: 175px;
   width: auto;
   z-index: 5;
   position: relative;
 }
 
 #logobottom {
-  height: 180px;
+  height: 175px;
   width: auto;
   z-index: 10;
   position: absolute;
+  transform: rotateZ(180deg);
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  z-index: 500;
+  position: absolute;
 }
 
 .Vice {
   background-color: #572020;
   height: 100vh;
+  width: 99vw;
 }
 
 .Versa {
   background-color: #202020;
   height: 100vh;
+  width: 99vw;
   display: flex;
-  align-items: flex-end;
   justify-content: flex-end;
   flex-direction: column;
 }

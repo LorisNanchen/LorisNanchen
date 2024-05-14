@@ -1,16 +1,14 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
 import Vice from './components/Vice'
 import Versa from './components/Versa'
+import steps from './assets/steps.svg'
 
 function App() {
 
   return (
     <>
       <Vice />
+      <div id='steps'></div>
       <Versa />
     </>
   )

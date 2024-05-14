@@ -5,7 +5,7 @@ export default function Footer() {
 
     return(
         <div className="Footer">
-            <img id="logobottom" src={logo}></img>
+            <img className="logo" id="logobottom" src={logo}></img>
         </div>
     )
 }

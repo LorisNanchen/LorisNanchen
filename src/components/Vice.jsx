@@ -1,4 +1,5 @@
 import Header from "./Header";
+import separator from "../assets/svg-separator.svg"
 
 
 export default function Vice() {
@@ -6,7 +7,7 @@ export default function Vice() {
     return(
         <div className="Vice">
             <Header />
-            <div className="separator"></div>
+            <div id="septop"></div>
         </div>
     )
 }

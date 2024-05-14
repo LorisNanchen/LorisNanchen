@@ -5,7 +5,7 @@ export default function Header() {
 
     return(
         <div className="Header">
-            <img id="logotop" src={logo}></img>
+            <img className="logo" id="logotop" src={logo}></img>
         </div>
     )
 }
