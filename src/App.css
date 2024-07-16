@@ -1,6 +1,7 @@
 :root {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 #steps {
@@ -12,11 +13,18 @@
   height: 15em;
   background-image: url("./assets/svg-separator.svg");
   transform: rotateX(180deg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
 }
 #septop {
-  height: 15em;
+  height: 15vw;
   background-image: url("./assets/svg-separator.svg");
   transform: rotateX(180deg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  margin-top: -1px;
 }
 
 .Header {
@@ -71,4 +79,21 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+}
+
+@media only screen and (min-width: 900px) {
+  #logotop {
+    height: 200px;
+    width: auto;
+    z-index: 5;
+    position: relative;
+  }
+  
+  #logobottom {
+    height: 200px;
+    width: auto;
+    z-index: 10;
+    position: absolute;
+    transform: rotateZ(180deg);
+  }
 }
